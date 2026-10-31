@@ -50,6 +50,28 @@ The application will open automatically at `http://localhost:8501`.
 
 ---
 
+## 🌐 Cloud Deployment Options
+
+### 1. Streamlit Community Cloud (Free & Direct from GitHub)
+1. Visit [share.streamlit.io](https://share.streamlit.io) and connect your GitHub account.
+2. Click **New app**, select `Abdumalik-ProDev/Bank-ML-App`, set Main file path to `app.py`.
+3. Click **Deploy**.
+
+### 2. Hugging Face Spaces (Docker / uv)
+Deploy automatically using `deploy_hf.py`:
+```bash
+uv run python deploy_hf.py <username/space-name> <hf_write_token>
+```
+
+### 3. Docker Container
+Build and run locally with Docker:
+```bash
+docker build -t bank-ml-app .
+docker run -p 7860:7860 bank-ml-app
+```
+
+---
+
 ## 📁 Project Structure
 
 ```

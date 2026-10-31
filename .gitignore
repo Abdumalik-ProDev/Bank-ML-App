@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Astral uv
+.uv/
+
+# Environment variables & secrets
+.env
+*.env
+
+# IDE & OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp

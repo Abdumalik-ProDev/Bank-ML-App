@@ -86,7 +86,7 @@ if __name__ == "__main__":
         token = os.environ.get("HF_TOKEN")
         repo_id = os.environ.get("HF_REPO_ID")
         if not token or not repo_id:
-            print("Usage: python deploy_hf.py <username/space-name> <hf_write_token>")
+            print("Usage: uv run python deploy_hf.py <username/space-name> <hf_write_token>")
             sys.exit(1)
     else:
         repo_id = sys.argv[1]
