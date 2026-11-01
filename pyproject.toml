@@ -17,5 +17,4 @@ dependencies = [
     "streamlit>=1.30.0",
     "xgboost>=2.0.0",
     "xlrd>=2.0.1",
-    "huggingface-hub>=0.20.0",
 ]

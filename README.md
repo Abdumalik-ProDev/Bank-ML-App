@@ -29,7 +29,7 @@ An end-to-end Machine Learning solution for credit default risk assessment and a
 
 ## 🛠️ Package Management with `uv`
 
-All dependencies are strictly managed with [`uv`](https://docs.astral.sh/uv/).
+All dependencies are strictly managed using [`uv`](https://docs.astral.sh/uv/).
 
 ### 1. Install & Sync Dependencies
 ```bash
@@ -50,42 +50,27 @@ The application will open automatically at `http://localhost:8501`.
 
 ---
 
-## 🌐 Cloud Deployment Options
-
-### 1. Streamlit Community Cloud (Free & Direct from GitHub)
-1. Visit [share.streamlit.io](https://share.streamlit.io) and connect your GitHub account.
-2. Click **New app**, select `Abdumalik-ProDev/Bank-ML-App`, set Main file path to `app.py`.
-3. Click **Deploy**.
-
-### 2. Hugging Face Spaces (Docker / uv)
-Deploy automatically using `deploy_hf.py`:
-```bash
-uv run python deploy_hf.py <username/space-name> <hf_write_token>
-```
-
-### 3. Docker Container
-Build and run locally with Docker:
-```bash
-docker build -t bank-ml-app .
-docker run -p 7860:7860 bank-ml-app
-```
-
----
-
 ## 📁 Project Structure
 
 ```
 Bank-ML-Project/
-├── app.py                     # Interactive Streamlit Web Application
-├── pyproject.toml             # uv project specification and dependencies
-├── README.md                  # Project documentation & run guide
+├── app.py                             # Interactive Streamlit Web Application
+├── pyproject.toml                     # uv project configuration and dependencies
+├── README.md                          # Project documentation & run guide
 ├── data/
 │   └── default of credit card clients.xls # UCI Credit Card Dataset (30,000 records)
-├── models/                    # Exported model pipelines & benchmark metrics (.json, .joblib)
+├── models/                            # Trained model pipelines & benchmark metrics (.json, .joblib)
+│   ├── benchmark_results.json
+│   ├── decision_tree.joblib
+│   ├── k_nearest_neighbors_knn.joblib
+│   ├── lightgbm.joblib
+│   ├── logistic_regression.joblib
+│   ├── random_forest.joblib
+│   └── xgboost.joblib
 └── src/
     ├── __init__.py
-    ├── data_loader.py         # Data loading, cleaning, & stratified train/test splits
-    ├── preprocessor.py        # ColumnTransformer, scaling, & encoding
-    ├── train.py               # Multi-model training & benchmarking script
-    └── inference.py           # Real-time credit risk scoring & explanation engine
+    ├── data_loader.py                 # Data loading, cleaning, & stratified train/test splits
+    ├── preprocessor.py                # ColumnTransformer, scaling, & encoding
+    ├── train.py                       # Multi-model training & benchmarking script
+    └── inference.py                   # Real-time credit risk scoring & explanation engine
 ```
